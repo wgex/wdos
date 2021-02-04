@@ -1,4 +1,4 @@
-#wDos by wgex
+#wDos by fikret0
 
 import random
 import socket
